@@ -1,4 +1,5 @@
 @import "./style.css";
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
 
 // css inspired by https://codepen.io/alvaromontoro/pen/BaaBYyz
 
@@ -148,27 +149,10 @@ div.arm {
 	align-items: center;
 	justify-content: center;
   }
-  
-  #player2-icons {
-	width: 30px;
-	height: 200px;
-	display: inline-flex;
-	flex-direction: column;
-  }
-  
-  #player2-icons > div {
-	flex: 1;
-	align-items: center;
-	justify-content: center;
-	width: 60px;
-	height: 60px;
-	overflow: hidden;
-	position: relative;
-  }  
+
     
   #message {
 	text-align: center;
-	display: none;
   }
   
   input:checked ~ #message {
@@ -181,14 +165,20 @@ div.arm {
 	justify-content: center;
   }
   
-  #player2-icons {
+  #player2-options {
 	width: 30px;
-	height: 200px;
+	height: 300px;
 	display: inline-flex;
 	flex-direction: column;
   }
   
-  #player2-icons > div {
+  #player2-options > button {
+	display: block;
+	position: absolute;
+	user-select: none;
+  }
+
+  #player2-options > div {
 	flex: 1;
 	align-items: center;
 	justify-content: center;
@@ -197,42 +187,34 @@ div.arm {
 	overflow: hidden;
 	position: relative;
   }
+    
   
-  
-  label:active {
-	position:static; 
-	margin-left: 60px;
-  }
-  
-  label:active::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 60px;
-	z-index: 10;
-	height: 60px;
-  }
-  
-  
-  label {
+  button {
 	animation: changeOrder 0.45s infinite linear;
 	background: #f5f5f5;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	cursor: pointer;
-	display: block;
 	height: 60px;
 	width: 60px;
 	line-height: 60px;
 	font-size: 2rem;
-	position: absolute;
 	top: 0;
 	left: 0;
-	user-select: none;
   }
   
-  label:nth-of-type(1) { animation-delay: -0.00s; }
-  label:nth-of-type(2) { animation-delay: -0.15s; }
-  label:nth-of-type(3) { animation-delay: -0.30s; }
-  
+  .score {
+	color: rgb(224, 224, 224);
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+  }
+  .score h2 {
+	font-size: 30px;
+  }
+  .score p {
+	text-align: center;
+	padding: 10px;
+	font-size: 25px;
+  }

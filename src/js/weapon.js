@@ -1,7 +1,7 @@
 /**
  * Class which defines a weapon. A weapon has a name and can beat other weapons.
- * name: the name of the weapon
- * beats: an array of names of weapons that are defeated in battle
+ * @param {*} name: the name of the weapon
+ * @param {*} beats: an array of names of weapons that are defeated in battle
  */
 export class Weapon {
 	constructor(name, beats) {
@@ -27,3 +27,10 @@ export const getRandomWeapon = () => {
 	return weaponValues[Math.floor(Math.random() * weaponValues.length)];
 }
 
+/**
+ * Get weapon by using name
+ * @param {*} weaponName
+ */
+export const convertStringToWeapon = (weaponName) => {
+	return Weapons[weaponName.toLowerCase()];
+};

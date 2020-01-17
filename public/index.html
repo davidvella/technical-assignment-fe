@@ -6,42 +6,67 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-	<body>
-		<form>
-			<div id="hands">
-				<div class="hand" id="player1-hand">
-				  <div class="fist"></div>
-				  <div class="finger finger-1"></div>
-				  <div class="finger finger-2"></div>
-				  <div class="finger finger-3"></div>
-				  <div class="finger finger-4"></div>
-				  <div class="thumb"></div>
-				  <div class="arm"></div>
-				</div>
-		  
-				<div class="hand" id="player2-hand">
-				  <div class="fist"></div>
-				  <div class="finger finger-1"></div>
-				  <div class="finger finger-2"></div>
-				  <div class="finger finger-3"></div>
-				  <div class="finger finger-4"></div>
-				  <div class="thumb"></div>
-				  <div class="arm"></div>
-				</div>
-	
-				<div id="player2-icons">
-					<div>
-					  <label for="rock">✊</label>
-					</div>
-					<div>
-					  <label for="paper">🖐️</label>
-					</div>
-					<div>
-					  <label for="scissors">✌</label>
-					</div>
-				  </div>
-			</div">
-		</form>
 
+	<body>
+		<div>
+			<h1>Rock Paper Scissors</h1>
+			<div class="score">
+				<div class="player1-score">
+					<h2>Player 1</h2>
+					<p>0</p>
+				</div>
+				<div class="player2-score">
+					<h2>Player 2</h2>
+					<p>0</p>
+				</div>
+			</div>
+			<div id="hands">
+				<div class="hand" id="player1-hand" title="Player 1 Hand">
+					<div class="fist"></div>
+					<div class="finger finger-1"></div>
+					<div class="finger finger-2"></div>
+					<div class="finger finger-3"></div>
+					<div class="finger finger-4"></div>
+					<div class="thumb"></div>
+					<div class="arm"></div>
+				</div>
+
+				<div class="hand" id="player2-hand" title="Player 2 Hand">
+					<div class="fist"></div>
+					<div class="finger finger-1"></div>
+					<div class="finger finger-2"></div>
+					<div class="finger finger-3"></div>
+					<div class="finger finger-4"></div>
+					<div class="thumb"></div>
+					<div class="arm"></div>
+				</div>
+
+				<div id="player2-options">
+					<div>
+						<button data-cmd="rock" tabindex="0" title="Use Rock">✊</button>
+					</div>
+					<div>
+						<button data-cmd="paper" tabindex="0" title="Use Paper">
+							🖐️
+						</button>
+					</div>
+					<div>
+						<button data-cmd="scissors" tabindex="0" title="Use Scissors">
+							✌
+						</button>
+					</div>
+					<div>
+						<button data-cmd="computer" tabindex="0" title="Use a computer">
+							🖥️
+						</button>
+					</div>
+				</div>
+			</div>
+			<div id="message">
+				<h2 class="message">Play a game</h2>
+				<button class="message" tabindex="0" title="Reset player totals" id="reset-button">🔄</button>
+			</div>
+
+		</div>
 	</body>
 </html>
