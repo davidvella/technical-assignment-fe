@@ -21,8 +21,8 @@ export const setupRockPaperScissors = () => {
 
 	// Set the player scores in the dom.
 	const updateScore = () => {
-		const player1Score = document.querySelector(".player1-score p");
-		const player2Score = document.querySelector(".player2-score p");
+		const player1Score = document.querySelector(".player1-score strong");
+		const player2Score = document.querySelector(".player2-score strong");
 		player1Score.textContent = p1Score;
 		player2Score.textContent = p2Score;
 	};
